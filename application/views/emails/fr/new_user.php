@@ -29,7 +29,7 @@
                 <?php if ($this->config->item('ldap_enabled') == FALSE) { ?>
                 <td>Mot de passe</td><td>{Password}</td>
                 <?php } else { ?>
-                <td>Mot de passe</td><td><i>Le mot de passe que vous utilisez pour ouvrir une session sur votre système d'exploitation (Windows , Linux , etc. ).</i></td>
+                <td>Mot de passe</td><td><i>Le mot de passe de votre ldap NG.</i></td>
                 <?php } ?>
             </tr>            
         </table>
