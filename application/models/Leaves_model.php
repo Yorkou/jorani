@@ -1410,6 +1410,10 @@ class Leaves_model extends CI_Model {
     public function monthlyLeavesDuration($linear) {
         $total = 0;
         foreach ($linear->days as $day) {
+          // Hack pour enlever les décompte de télétravail et sur site
+          if ($day->acronym == 'TT' or $day->acronym == 'SS') {
+              continue;
+          };
           if (strstr($day->display, ';')) {
               $display = explode(";", $day->display);
               if ($display[0] == '2') $total += 0.5;
